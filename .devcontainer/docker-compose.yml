@@ -1,0 +1,25 @@
+version: '3.2'
+services:
+  solidjs_sample:
+    container_name: solidjs_app
+    # ホスト名を明示的に指定する
+    hostname: localhost
+    build:
+      context: .
+      dockerfile: ./ubuntu/Dockerfile
+      args:
+        USER_ID: 1000
+        USER_NAME: vscode
+        GROUP_ID: 1000
+        GROUP_NAME: vscode
+    env_file: devcontainer.env
+    environment:
+      - TZ=JST-9
+    ports:
+      - 80:80
+      - 3000:3000
+    volumes:
+      # ソースコードとdevcontainerを一緒に管理する場合は明示的にマウント先を指定
+      - ..:/home/vscode/develop:cached
+      - ~/.ssh:/home/vscode/.ssh
+    command: sleep infinity
