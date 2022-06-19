@@ -4,6 +4,7 @@ ARG USER_ID
 ARG USER_NAME
 ARG GROUP_ID
 ARG GROUP_NAME
+ARG WORK_DIR
 
 # 証明書のDL
 RUN set -x \
@@ -67,3 +68,13 @@ RUN set -x \
     && apt-get install -y --no-install-recommends \
     nodejs \
     && apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
+
+# install pnpm
+RUN npm install -g pnpm
+
+USER ${USER_NAME}
+
+# create workingirectory
+RUN set -x \
+    && mkdir /home/${USER_NAME}/${WORK_DIR}
+WORKDIR /home/${USER_NAME}/${WORK_DIR}
