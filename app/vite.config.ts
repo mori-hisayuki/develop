@@ -6,6 +6,7 @@ import solidPlugin from 'vite-plugin-solid';
 
 export default defineConfig({
   plugins: [solidPlugin()],
+  // server設定を追加、portは3030に固定
   server: {
     port: 3030,
   },
