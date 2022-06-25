@@ -1,0 +1,40 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "vitest",
+    "postinstall": "node ./fix-jest-dom.mjs",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --check \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "format:fix": "prettier --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" "
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@types/eslint": "^8.4.3",
+    "@types/jsdom": "^16.2.14",
+    "@types/prettier": "^2.6.3",
+    "@types/testing-library__jest-dom": "^5.14.3",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-solid": "^0.7.0",
+    "jsdom": "^19.0.0",
+    "prettier": "^2.7.1",
+    "solid-testing-library": "^0.3.0",
+    "typescript": "^4.6.4",
+    "vite": "^2.9.9",
+    "vite-plugin-solid": "^2.2.6",
+    "vitest": "^0.12.7"
+  },
+  "dependencies": {
+    "solid-js": "^1.4.2"
+  }
+}

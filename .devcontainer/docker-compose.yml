@@ -12,6 +12,7 @@ services:
         USER_NAME: vscode
         GROUP_ID: 1000
         GROUP_NAME: vscode
+        WORK_DIR: develop
     env_file: devcontainer.env
     environment:
       - TZ=JST-9
