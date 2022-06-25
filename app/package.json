@@ -10,7 +10,9 @@
     "serve": "vite preview",
     "test": "vitest",
     "postinstall": "node ./fix-jest-dom.mjs",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --check \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "format:fix": "prettier --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" "
   },
   "license": "MIT",
   "devDependencies": {
