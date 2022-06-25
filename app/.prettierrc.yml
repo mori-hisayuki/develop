@@ -4,16 +4,16 @@
 ##########################################################################
 
 # 折り返す行の長さ (.editorconfig:max_line_lengthでoverride)
-# printWidth: 80
+printWidth: 90
 # インデントごとのスペース数 (.editorconfig:indent_sizeでoverride)
-# tabWidth: 2
+tabWidth: 2
 # スペースの代わりにタブを利用するか (.editorconfig:indent_styleでoverride)
-# useTabs: false
+useTabs: false
 # 末尾セミコロンの有無
 semi: false
 # ダブルクォートの代わりにシングルクォート
 singleQuote: true
-# 末尾コンマをなくす (https: //prettier.io/docs/en/options.html#trailing-commas)
+# 末尾コンマをなくす (https://prettier.io/docs/en/options.html#trailing-commas)
 trailingComma: 'none'
 # オブジェクトリテラルの角かっこの間のスペース
 bracketSpacing: true
