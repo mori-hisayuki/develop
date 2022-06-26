@@ -10,8 +10,8 @@
     "serve": "vite preview",
     "test": "vitest",
     "postinstall": "node ./fix-jest-dom.mjs",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src/* ",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix ./src/* ",
     "format": "prettier --check \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
     "format:fix": "prettier --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
     "prepare": "cd .. && husky install app/.husky"
@@ -42,7 +42,7 @@
     "solid-js": "^1.4.2"
   },
   "lint-staged": {
-    "*.{ts,tsx,css,json,md}": [
+    "src/*.{ts,tsx,css,json,md}": [
       "pnpm lint:fix",
       "pnpm format:fix"
     ]
