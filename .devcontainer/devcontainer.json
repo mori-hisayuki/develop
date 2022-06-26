@@ -21,6 +21,7 @@
     "ms-azuretools.vscode-docker",            // Docker
 		"rangav.vscode-thunder-client",           // Thunder Client
 		"ritwickdey.liveserver",                  // Live Server
+    "dbaeumer.vscode-eslint",                 // ESLint
     "zhuangtongfa.material-theme"             // Prettier - Code formatter
 	],
 	"remoteUser": "vscode"
