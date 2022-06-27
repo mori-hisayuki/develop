@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 cd app
-pnpx lint-staged
+pnpx lint-staged --no-stash
