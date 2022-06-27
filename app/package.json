@@ -10,10 +10,10 @@
     "serve": "vite preview",
     "test": "vitest",
     "postinstall": "node ./fix-jest-dom.mjs",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src/* ",
-    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix ./src/* ",
-    "format": "prettier --check \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
-    "format:fix": "prettier --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "lint": "eslint --ext .ts,.tsx ./src/* ",
+    "lint:fix": "eslint --ext .ts,.tsx --fix ./src/* ",
+    "format": "prettier --check --ignore-unknown \"./**/*.{html,ts,tsx,css,md,json}\" ",
+    "format:fix": "prettier --write --ignore-unknown \"./**/*.{html,ts,tsx,css,md,json}\" ",
     "prepare": "cd .. && husky install app/.husky"
   },
   "license": "MIT",
@@ -42,9 +42,7 @@
     "solid-js": "^1.4.2"
   },
   "lint-staged": {
-    "src/*.{ts,tsx,css,json,md}": [
-      "pnpm lint:fix",
-      "pnpm format:fix"
-    ]
+    "src/*.{html,ts,tsx,css,json,md}": "pnpm format:fix",
+    "src/*.{ts,tsx}": "pnpm lint:fix"
   }
 }
